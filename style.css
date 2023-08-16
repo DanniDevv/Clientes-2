@@ -1,0 +1,124 @@
+body {
+    font-family: 'Futura', sans-serif;
+    background-image: url(img/FONDO.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.titulo {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-top: 5%;
+    transition: transform 0.3s ease;
+}
+
+.titulo h1 {
+    font-size: 50px;
+    color: white;
+    margin: 0;
+}
+
+.titulo img {
+    width: 100px;
+    margin-left: 30px;
+}
+
+.titulo:hover {
+    transform: scale(1.1);
+}
+
+.swiper-container {
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+/* Ajusta el ancho de los swiper-slide según tus necesidades */
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 550px; /* Ajusta el ancho según tus necesidades */
+    height: 300px;
+    border-radius: 20px;
+}
+
+.info h5 {
+    margin: 0;
+    padding-top: 15px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.685);
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.info span {
+    font-size: 15px;
+    color: red;
+    font-weight: bold;
+}
+
+.swiper-slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Agrega esta línea para centrar horizontalmente */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Agrega transición para suavizar el cambio de color de fondo */
+    opacity: 0; /* Start with 0 opacity for fade-in effect */
+    animation: fadeSlide 1s forwards; /* Apply the fade-in animation */
+}
+
+/* Agrega esto para cambiar el color de fondo al pasar el cursor por encima */
+.swiper-slide:hover {
+    background-color: white;
+}
+
+.info {
+    flex: 1;
+    padding: 1px;
+    display: none;
+    opacity: 0; /* Start with 0 opacity for fade-in effect */
+    animation: fadeInfo 0.5s forwards; /* Apply the fade-in animation */
+}
+
+.swiper-slide:hover .info {
+    display: block;
+}
+
+.img-container {
+    flex: 1;
+    padding: 1px;
+    max-width: 50%; /* Ajusta el tamaño de la imagen */
+    display: flex; /* Agrega esto para centrar verticalmente */
+    align-items: center; /* Agrega esto para centrar verticalmente */
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Añade esta línea para evitar el espacio extra debajo de la imagen */
+}
+
+
+@keyframes fadeSlide {
+    to {
+        opacity: 1; /* Fade in to full opacity */
+    }
+}
+
+@keyframes fadeInfo {
+    to {
+        opacity: 1; /* Fade in to full opacity */
+    }
+}
